@@ -54,7 +54,8 @@
   }
 
   .col{
-    max-width:720px;
+    max-width:800px;
+    margin:0 auto;
   }
 
   /* ---------- Header ---------- */
@@ -118,7 +119,7 @@
 
   /* ---------- Sections ---------- */
   main section{
-    padding:64px 0;
+    padding:72px 0 56px;
     border-bottom:1px solid var(--border);
   }
   main section:last-of-type{ border-bottom:none; }
@@ -129,7 +130,18 @@
     margin-bottom:6px;
   }
 
-  h2{ font-size:1.65rem; margin-bottom:22px; }
+  h2{
+    font-family:Inter,"Segoe UI",Arial,sans-serif;
+    font-size:1rem;
+    font-weight:700;
+    color:var(--brown);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin-bottom:28px;
+    padding-bottom:14px;
+    border-bottom:2px solid var(--clay);
+    display:inline-block;
+  }
   h3{ font-size:1.2rem; margin-bottom:10px; }
 
   /* ---------- What I Do : two column ---------- */
@@ -163,8 +175,8 @@
     gap:10px;
     flex-wrap:wrap;
     margin:30px 0;
-    padding:22px 24px;
-    background:var(--ivory);
+    padding:26px 28px;
+    background:var(--panel);
     border:1px solid var(--border);
     border-radius:6px;
   }
@@ -314,13 +326,34 @@
   }
   .contact-list{
     display:flex;
-    gap:28px;
+    gap:36px;
     flex-wrap:wrap;
     list-style:none;
     margin:0;
     padding:0;
     font-size:0.98rem;
-    color:#E7E0D8;
+  }
+  .contact-label{
+    display:block;
+    color:var(--clay);
+    font-size:0.82rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    margin-bottom:6px;
+  }
+  .contact-link{
+    color:var(--ivory);
+    text-decoration:underline;
+    text-underline-offset:3px;
+    font-weight:600;
+    transition:color .15s ease;
+  }
+  .contact-link:hover{ color:var(--clay); }
+  .contact-link:active{ color:#D8CFC5; }
+  .contact-link:focus-visible{
+    outline:2px solid var(--clay);
+    outline-offset:4px;
+    border-radius:2px;
   }
 
   footer.site-footer{
@@ -380,7 +413,7 @@
     <div class="wrap col">
       <h2>What I Do</h2>
     </div>
-    <div class="wrap">
+    <div class="wrap col">
       <div class="do-grid">
         <div class="do-item">
           <h3>Practical Swahili</h3>
@@ -479,8 +512,8 @@
       <p>The examples below show different parts of my current practice: published writing on communication and context, practical Swahili learning resources, and developing work around East Africa readiness.</p>
     </div>
 
-    <div class="wrap">
-      <div class="col">
+    <div class="wrap col">
+      <div>
         <h3 style="margin-top:36px;">Published Writing</h3>
       </div>
 
@@ -593,7 +626,7 @@
       <p>I am open to collaboration where my East Africa-specific communication and Swahili expertise adds something useful to work that is already underway or to something we could develop together.</p>
     </div>
 
-    <div class="wrap">
+    <div class="wrap col">
       <div class="collab-grid" style="margin-top:24px;">
         <div class="collab-card">
           <h4>Specialist contribution</h4>
@@ -643,7 +676,7 @@
     <div class="wrap col">
       <h2>Current Areas of Practice</h2>
     </div>
-    <div class="wrap">
+    <div class="wrap col">
       <div class="practice-grid">
         <div class="practice-item">
           <h4>Practical Swahili</h4>
@@ -673,9 +706,14 @@
         <p class="contact-tagline">Practical Swahili | Cross-cultural communication | East Africa readiness</p>
         <p style="color:#E7E0D8; margin-bottom:22px;">SwahiliTalkLab · Nairobi, Kenya</p>
         <ul class="contact-list">
-          <li>Website</li>
-          <li>Email</li>
-          <li>LinkedIn</li>
+          <li>
+            <span class="contact-label">Email</span><br>
+            <a href="mailto:swahilitalklabinfo@gmail.com" class="contact-link">swahilitalklabinfo@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-label">LinkedIn</span><br>
+            <a href="https://www.linkedin.com/in/grace-njoki-1267b9146" target="_blank" rel="noopener noreferrer" class="contact-link">View LinkedIn profile <span aria-hidden="true">→</span></a>
+          </li>
         </ul>
       </div>
     </div>
